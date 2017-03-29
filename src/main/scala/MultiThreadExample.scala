@@ -1,5 +1,6 @@
 import java.util.concurrent.{Callable, Executors}
 
+import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
 /**
