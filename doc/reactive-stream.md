@@ -21,18 +21,23 @@ public static interface Flow.Publisher<T> {
 public static interface Flow.Subscriber<T> {  
     //注册订阅接口
     public void    onSubscribe(Flow.Subscription subscription);  
+    //发布者向订阅者发送数据
     public void    onNext(T item) ;  
+    //发布者通知订阅者有异常发生
     public void    onError(Throwable throwable) ;  
+    //发布者向订阅者通知订阅已完成
     public void    onComplete() ;  
 }   
   
 //发布者和订阅之间的通讯
 public static interface Flow.Subscription {  
+    //订阅者向发布者请求数据
     public void    request(long n);  
+    //订阅者向发布者通知订阅取消
     public void    cancel() ;  
 }   
   
-//chain
+//chain，用于定义发布订阅过程中的事件处理，如果map,filter等的流式api操作
 public static interface Flow.Processor<T,R>  extends Flow.Subscriber<T>, Flow.Publisher<R> {  
 }  
 ```
