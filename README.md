@@ -10,6 +10,6 @@ scala, akka, akka-stream 异步高性能编程实战
 - [面向响应式流编程](doc/reactive-stream_oriented.md)
 - [akka-stream tcp编程](doc/akka-stream_tcp.md)
 - [akka-http编程](doc/akka-http.md)
-- akka-stream应用场景
+- [akka-stream应用场景](doc/akka-stream-use.md)
 - [akka-stream现有支持](doc/akka-stream_apply,md)
           
